@@ -19,7 +19,7 @@ body {
     font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     .class-info-head {
         padding-left: 40%;
     }
