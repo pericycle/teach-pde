@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
 
@@ -11,52 +12,52 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>PDEs Solutions</title>
-  </head>
-  <body>
-   <h1> HMTH407 - Partial Differential Equations </h1>
-   <h3>Assignment 1 solutions</h3>
-   <div class="inbody">
-     <p>
-       <ol>
-         <li>
-           For each of the following equations, state the order and whether it is nonlinear,
-           linear inhomogeneous, or linear homogeneous.
-             <div class="innersol">
-              <ol type="a" class="list1">
+</head>
+
+<body>
+    <h1> HMTH407 - Partial Differential Equations </h1>
+    <h3>Assignment 1 solutions</h3>
+    <div class="inbody">
+        <p>
+            <ol>
                 <li>
-                  \( (\cos xy^2)u_x - y^2u_{xxy} = \tan(x^2+y^2)\) <br>
-                  <span class="solution">
+                    For each of the following equations, state the order and whether it is nonlinear, linear inhomogeneous, or linear homogeneous.
+                    <div class="innersol">
+                        <ol type="a" class="list1">
+                            <li>
+                                \( (\cos xy^2)u_x - y^2u_{xxy} = \tan(x^2+y^2)\) <br>
+                                <span class="solution">
                     \(\boxed{\text{third order, linear inhomogeneous}} \)
                     </span>
-                  </li>
-                  <li>
-                    \( \frac{u_x}{\sqrt{1+u_x^2}}+\frac{u_y}{\sqrt{1+u_y^2}}=0\) <br class=big>
-                    <span class="solution">
+                            </li>
+                            <li>
+                                \( \frac{u_x}{\sqrt{1+u_x^2}}+\frac{u_y}{\sqrt{1+u_y^2}}=0\) <br class=big>
+                                <span class="solution">
                       \(\boxed{\text{first order, nonlinear}}\)
                     </span>
-                    </li>
-                 </ol>
-              </div>
+                            </li>
+                        </ol>
+                    </div>
 
 
-         </li>
-         <li>
-           Solve the equation \( (1+x^2)u_x + u_y = 0 \).<br />
-           <span class="solution">
-             The characteristic curves are obtained by solving the equation <br />
+                </li>
+                <li>
+                    Solve the equation \( (1+x^2)u_x + u_y = 0 \).<br />
+                    <span class="solution">
+             The characteristics curves are obtained by solving the equation <br />
              \[\displaystyle\frac{dy}{dx} = \frac{1}{1+x^2}\rightarrow y = \arctan(x)+c\] <br />
              The characteristic coordinate is: \(\displaystyle\xi = y - \arctan(x). \)
              The solution \(u(x,y)\) is constant along the characteristics, that is
              \[ \boxed{u(x,y) = f(\xi) = f(y-\arctan(x))} \]
              where \(f\) is an arbitrary function.
            </span>
-           </li>
-           <li>
-             Solve the equation \[\sqrt{1-x^2}u_x +  u_y = 0,\,\,\,u(0,y)=y.\]
-             <span class="solution">
+                </li>
+                <li>
+                    Solve the equation \[\sqrt{1-x^2}u_x + u_y = 0,\,\,\,u(0,y)=y.\]
+                    <span class="solution">
                The characteristic curves are obtained by solving the equation <br />
                \[ \displaystyle\frac{dy}{dx} = \frac{1}{\sqrt{1-x^2}}\rightarrow y = \arcsin(x)+c\] <br />
                The characteristic coordinate is then: \( \displaystyle\xi = y-\arcsin(x). \)
@@ -68,10 +69,10 @@
                \[\boxed{ u(x,y) = y-\arcsin(x)}, \]
                where \(x\in [0,1].\)
              </span>
-             </li>
-             <li>
-               Solve \[u_x+u_y+u = e^{x+y},\,\,\,\,u(x,0)=0.\]
-               <span class="solution">
+                </li>
+                <li>
+                    Solve \[u_x+u_y+u = e^{x+y},\,\,\,\,u(x,0)=0.\]
+                    <span class="solution">
                  The slopes of the characteristic curves are solutions of the ODE
                  \[ \frac{dy}{dx} = 1\rightarrow y = x + c.\]
                  Change coordinates to \(\xi, \eta\) where \(\displaystyle \xi = y - x\) and \(\displaystyle\eta = x\). Thus
@@ -97,15 +98,80 @@
                  \[ u(x,y) = \frac{1}{3}e^{y+x} - \frac{1}{3}e^{-2(y-x)}e^{-x}\]
                  which simplifies into
                  \[\boxed{ u(x,y)  = \frac{1}{3}\left(e^{y+x} - e^{x-2y}\right).}\]
-
-
-
-
                </span>
-               </li>
-       </ol>
-       </p>
-     </div>
+                </li>
+                <li>
+                    Consider the one-dimensional wave equation: \[u_{tt}-c^2u_{xx}=0,\,\,\,c>0 \]
+                    <ol type="a">
+                        <li>
+                            Show that the wave equation is hyperbolic <br>
+                            <span class="solution">
+                          The general form of a linear second order PDE is
+                          \[A(x,y) u_{xx} + 2B(x,y)u_{xy} + C(x,y)u_{yy} +D(x,y)u_x + E(x,y)u_y + F(x,y)u = G(x,y)\]
+                          Setting \(t\rightarrow x\) and \(x\rightarrow y\) we see that
+                          \(A = 1,\,\,2B = 0,\,\,C = c^2 \). So that the discriminant can be calculated as follows
+                          \[ B^2-AC = 0 - \cdot 1\cdot c^2 < 0.\] This shows that the wave equation is \( \textit{hyperbolic}.\)
+                        </span>
+                        </li>
+                        <li>
+                            By the method of characteristics, deduce that the general solution for the wave equation is given by the formula \[ u(x,t) = F(x+ct) + G(x-ct) \] where \(F, G\) are arbitrary.
+                            <br>
+                            <span class="solution">
+                              The equation for the characteristics is obtained by solving the ODE
+                              \[\frac{dx}{dt} = \frac{B\pm \sqrt{B^2-AC}}{A} = \pm c.\]
+                              The solutions are \[x = ct + \alpha,\,\,\,x = -ct+\beta\]
+                              where \(\alpha, \beta\) are constants. Therefore the new characteristic coordinates are
+                              \[\xi = x + ct,\,\,\,\eta = x - ct.\]
+                              Changing coordinates from \(t,x\)  to \(\xi,\eta\), let
+                              \[ u(t,x) = w(\xi(t,x), \eta(t,x).\] By the chain rule,
+                              \[u_t = w_\xi \xi_t + w_\eta \eta_t, \]
+                              \[u_x = w_\xi \xi_x + w_\eta\eta_x, \]
 
-  </body>
+                              \[u_{tt} = w_{\xi\xi} \xi_t^2 + 2w_{\xi\eta}\xi_t\eta_t + w_{\eta\eta}\eta_t^2 + w_\xi \xi_{tt} + w_{\eta}\eta_{tt} \]
+                              \[u_{xx} = w_{\xi\xi} \xi_x^2 + 2w_{\xi\eta}\xi_x\eta_x + w_{\eta\eta}\eta_x^2 + w_\xi \xi_{xx} + w_{\eta}\eta_{xx} \]
+                              Taking derivatives of \(\xi, \eta\) w.r.t. \(t, x\) we get
+                              \[ \xi_t = c,\,\,\xi_x = 1,\,\,\eta_t = -c,\,\,\eta_x = 1. \] Hence
+                              \[u_{tt} = c^2 w_{\xi\xi} - 2c^2 w_{\xi\eta} + c^2 w_{\eta\eta} \]
+                              \[c^2 u_{xx} = c^2 w_{\xi\xi} + 2c^2 w_{\xi\eta} + c^2w_{\eta\eta}.\] Subtracting, we obtain
+                              \[ u_{tt} - c^2u_{xx} = -2c^2 w_{\xi\eta} = 0.\] Since \( c>0 \), we get
+                              \[ w_{\xi\eta} = 0. \] Integrating this w.r.t \( \xi \) gives
+                              \[ w_\eta = g(\eta). \] Integrating with respect to \(\eta\) we obtain
+                              \[ w = \int g(\eta)\, d\eta + F(\xi). \] Setting \( G(\eta) = \int g(\eta)\, d\eta \) we get
+                              \[ w(\xi,\eta) = F(\xi) + G(\eta). \] Reverting back to the original variables \(x, y\), we get the general
+                              solution
+                              \[ \boxed{u(x,y) = F(x+ct) + G(x-ct)}\]
+                            </span>
+                        </li>
+                        <li>
+                          Consider the initial conditions
+                          \[ u(x,0) = f(x),\,\,\,u_t(x,0) = g(x).\] Show that the solution of the Cauchy problem for the wave equation is given by
+                          \[u(x,t) = \frac{1}{2}\left[f(x+xt)+f(x-ct)\right] +\frac{1}{2c}\int_{x-ct}^{x+ct} g(s)\,ds.\]
+                          <br />
+                          <span class="solution">
+                            Setting \( t = 0 \) into the general solution, we obtain
+                            \[ u(x,0) = f(x) = F(x) + G(x). \] Also, taking the time derivative of the general solution gives, by the chain rule
+                            \[ u_t(x,t) = cF'(x+ct) - cG'(x-ct), \] which yields
+                            \[ u_t(x,0) = g(x) = cF'(x) -c G'(x)\] when evaluated at \(t=0.\) or
+                            \[ \frac{1}{c} g(x) = F'(x) - G'(x)\]
+                            Assume \(f'(x) \) exists, then
+                            \[ f'(x) = F'(x) + G'(x)\] and adding the above, we get
+                            \[ f'(x) + \frac{1}{c}g(x) = 2F'(x) \] and substracting, we obtain
+                            \[ f'(x) - \frac{1}{c}g(x) = 2G'(x). \] Hence, by integration
+                            \[ F(s) = \frac{1}{2}f(s) +\frac{1}{2c}\int_0^s g(\tau)\,d\,\tau + A\]
+                            \[ G(s) = \frac{1}{2}f(s) -\frac{1}{2c}\int_0^s g(\tau)\,d\,\tau + B.\]
+                            Since \(f(s) = F(s)+G(s)\), we have \(A+B=0.\) Setting \(s=x+ct\) in the \(F(s)\) equation
+                            and \(s = x-ct\) in the \(G(s)\) equation, we get
+                            \[ u(x,t) = F(x+ct)+G(x-ct) = \frac{1}{2}\left[f(x+ct)+f(x-ct)\right] + \frac{1}{2c}\int_{x-ct}^{x+ct}g(\tau)\,d\tau\]
+
+                          </span>
+                        </li>
+
+                    </ol>
+                </li>
+            </ol>
+        </p>
+    </div>
+
+</body>
+
 </html>
