@@ -110,7 +110,7 @@
                           \[A(x,y) u_{xx} + 2B(x,y)u_{xy} + C(x,y)u_{yy} +D(x,y)u_x + E(x,y)u_y + F(x,y)u = G(x,y)\]
                           Setting \(t\rightarrow x\) and \(x\rightarrow y\) we see that
                           \(A = 1,\,\,2B = 0,\,\,C = c^2 \). So that the discriminant can be calculated as follows
-                          \[ B^2-AC = 0 - \cdot 1\cdot c^2 < 0.\] This shows that the wave equation is \( \textit{hyperbolic}.\)
+                          \[ B^2-AC = 0^2 - 1\cdot c^2 < 0.\] This shows that the wave equation is \( \textit{hyperbolic}.\)
                         </span>
                         </li>
                         <li>
@@ -123,7 +123,7 @@
                               where \(\alpha, \beta\) are constants. Therefore the new characteristic coordinates are
                               \[\xi = x + ct,\,\,\,\eta = x - ct.\]
                               Changing coordinates from \(t,x\)  to \(\xi,\eta\), let
-                              \[ u(t,x) = w(\xi(t,x), \eta(t,x).\] By the chain rule,
+                              \[ u(t,x) = w(\xi(t,x), \eta(t,x)).\] By the chain rule,
                               \[u_t = w_\xi \xi_t + w_\eta \eta_t, \]
                               \[u_x = w_\xi \xi_x + w_\eta\eta_x, \]
 
@@ -161,10 +161,53 @@
                             \[ G(s) = \frac{1}{2}f(s) -\frac{1}{2c}\int_0^s g(\tau)\,d\,\tau + B.\]
                             Since \(f(s) = F(s)+G(s)\), we have \(A+B=0.\) Setting \(s=x+ct\) in the \(F(s)\) equation
                             and \(s = x-ct\) in the \(G(s)\) equation, we get
-                            \[ u(x,t) = F(x+ct)+G(x-ct) = \frac{1}{2}\left[f(x+ct)+f(x-ct)\right] + \frac{1}{2c}\int_{x-ct}^{x+ct}g(\tau)\,d\tau\]
+                            \[ u(x,t) = F(x+ct)+G(x-ct) = \frac{1}{2}\left[f(x+ct)+f(x-ct)\right] + \frac{1}{2c}\int_{x-ct}^{x+ct}g(\tau)\,d\tau.\]
 
                           </span>
                         </li>
+ <li>
+   To show that d'Alembert's solution satisfies the wave equation:
+   <span class=solution">
+                        \[u_t = \frac{1}{2}\left[ cf'(x+ct)-cf'(x-ct)\right]+\frac{1}{2c}\left[ c\cdot g(x+ct) - c\cdot g(x-ct)\right] \]
+             \[u_{tt} = \frac{1}{2}\left[ c^2f''(x+ct)+c^2f''(x-ct)\right]+\frac{1}{2c}\left[ c^2\cdot g'(x+ct) - c^2\cdot g'(x-ct)\right] \]
+                        \[c^2u_{xx} = c^2\frac{1}{2}\left[ f''(x+ct)+f''(x-ct)\right]+c^2\frac{1}{2c}\left[ g'(x+ct) - g'(x-ct)\right] \]
+                        So \(u_{tt}-c^2u_{xx}=0.\) It remains to verify the boundary conditions:
+                        \[ u(x,0) = \frac{1}{2}[f(x) + f(x)] + \frac{1}{2c}\int_x^x g(\tau)\,d\,\tau = f(x)\]
+                        \[u_t(x,t) = cf'(x+ct)-cf(x-ct) +\frac{1}{2c}[cg(x+ct)-(-cg(x-ct))] = \frac{1}{2}[g(x+ct)+g(x-ct).\] So 
+                        \[u_t(x,0) = g(x). \]
+                        
+                
+                        </span>
+                      </li>
+                        <li>
+                        Solve the wave equation 
+                        \[ \begin{align*}
+                        & u_{tt}-25u_{xx} = 0\\
+                        & u(x,0) = e^{-x^2},\\
+                        & u_t(x,0) = 4+x.
+                        \end{align*}
+                        \]
+                        <span class="solution">
+                           Use d'Alembert's solution with \(c=5,\, f(x)=e^{-x^2},\,g(x)=4+x.\)                   
+                \[u(x,t) = \frac{1}{2}\left[ e^{-(x+5t)^2} + e^{-(x-5t)^2} \right] + \frac{1}{10}\int_{x-5t}^{x+5t}(4+\tau)\,d\,\tau \]  
+                                              \[u(x,t) = \frac{1}{2}\left[ e^{-(x+5t)^2} + e^{-(x-5t)^2} \right] + \frac{1}{10} \left[4(x+5t)-4(x-5t)+\frac{1}{2}\left((x+5t)^2-(x-5t)^2 \right) \right] \] 
+               
+            \[ \boxed{u(x,t) = \frac{1}{2}\left[ e^{-(x+5t)^2} + e^{-(x-ct)^2} \right] + 4t + \frac{1}{2}xt} \]                                   
+                                              </span>
+                        </li>
+                                              <li>
+                                              The linear second order PDE 
+                                              \[ u_{xx}-2u_{xy}+u_{yy}+u_x-u_y=0\] is \(\textit{parabolic} \) since \[a=1,\,\, 2b=-2,\,\,c=1.\] The discriminant is then 
+                                              \[ b^2-ac = (-1)^2-1\cdot 1 = 0.\]
+                                              The characteristic equation is \[\frac{dy}{dx} = -1 \] and so \[y = -x + c.\] Set \[\xi = y+x,\,\,\eta = x.\] Changing coordinates,
+                                              \[ u(x,y) = w(\xi(x,y),\eta(x,y))\] we get the standard form in the new coordinates
+                                              \[u_{xx} - 2u_{xy} + u_{yy} + u_x-u_y = w_{\eta\eta} +w_\eta = 0.\] This PDE can be solved by multipication using an integrating factor  \(e^\eta\)  
+       \[\frac{\partial }{\partial\eta}\left(e^\eta w_\eta\right) = 0.\] The solution is obtained by integration 
+  \[ w_\eta = e^{-\eta} f(\xi)  \] and 
+      \[w(\xi\eta) = g(\xi) - e^{-\eta}f(\xi). \] Reverting to \(x, y\), we get
+   \[ \boxed{u(x,y) = g(y+x) - e^{-x}f(y+x).} \]                                           
+                                  
+                                             </li>
 
                     </ol>
                 </li>
